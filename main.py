@@ -5,7 +5,7 @@ import time
 import config    #seperate config file
 
 def get_weather_query(owm):
-    """Takes the owm auth and returns the weather object."""
+    """Takes the owm auth and returns the weather object at a given location."""
 
     city_id = 4068590   #Currently Huntsville, AL
     obs = owm.weather_at_id(city_id)
