@@ -54,7 +54,9 @@ def write_tweet_string(weather_dict=dict):
     pressure_string = weather_dict['pressure']['press']
     weather_desc_string = weather_dict['weather_desc']
 
-    tweet_string = "The temperature is " + str(temp_string) + "F and the wind is blowing at " + str(round(wind_string, 2)) + "mph from the " + str(wind_dir_string) + " (" + str(round(weather_dict['wind']['deg'], 2)) + "°). The pressure is " + str(pressure_string) + "mb. The weather can be described as '" + str(weather_desc_string) + ".'"
+    tweet_string = ("The temperature is " + str(temp_string) + "F and the wind is blowing at " + str(round(wind_string, 2)) 
+        + "mph from the " + str(wind_dir_string) + " (" + str(round(weather_dict['wind']['deg'], 2)) + "°). The pressure is " 
+        + str(pressure_string) + "mb. The weather can be described as '" + str(weather_desc_string) + ".'")
     return tweet_string
 
 def convert_headings(wind_heading=int):
